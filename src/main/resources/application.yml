@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: teamposition
+
+    datasource:
+      platform: org.hibernate.dialect.H2Dialect
+      driver-class-name: org.h2.Driver
+      url: jdbc:h2:mem:teamposition;DB_CLOSE_ON_EXIT=FALSE
+      username:
+      password:
+      
+
+    jpa:
+      hibernate:
+         naming.physical-strategy : business.config.H2PhysicalNamingStrategy
+    
+server:
+  port : 8086
+  
+search:
+    server:
+        baseUrl: https://apiv2.apifootball.com
+        APIKey: 9bb66184e0c8145384fd2cc0f7b914ada57b4e8fd2e4d6d586adcc27c257a978
